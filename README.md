@@ -33,7 +33,7 @@ A hands-on demonstration of building a secure, custom AWS environment using **VP
 *   Attached the IAM Role as an **Instance Profile** to the EC2 to avoid using static access keys.
 
 **Proof:**
-![Securty Group Configuration](securitygroup.png)
+![Securty Group Configuration](images/securitygroup.png)
 ![IAM Role Configuration](images/iamrole.png)
 
 ### 3. EC2 Instance Deployment
@@ -41,6 +41,9 @@ A hands-on demonstration of building a secure, custom AWS environment using **VP
 *   Assigned the `GoMyEC2SecurityGroup` to the instance for secure access.
 *   Attached the `EC2-S3-Access-Role` during the launch process.
 *   Successfully connected to the instance via **SSH** using a secure key pair.
+
+**Proof:**
+![Securty Group Configuration](images/EC2instance.png)
 
 ### 4. S3 Interaction (CLI)
 Launched the instance and performed CLI operations to verify the IAM Role integration:
@@ -60,12 +63,5 @@ aws s3 ls s3://gomys3bucket/
 **Proof:**
 ![Terminal S3 Interaction](images/s3bucketinterractionterminal.png)
 ![S3 Bucket Contents](images/S3bucket.png)
-
----
-
-## 💡 Key Learnings
-*   **Security:** Implemented "Least Privilege" by using IAM Roles instead of hardcoded credentials.
-*   **Networking:** Mastered the flow of traffic between Internet Gateways, Route Tables, and Subnets.
-*   **Storage:** Demonstrated seamless S3 integration using the AWS CLI.
 
 ---
