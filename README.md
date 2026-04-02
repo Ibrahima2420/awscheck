@@ -1,4 +1,4 @@
-# AWS Project: EC2 to S3 Secure Integration
+# AWS Cloud Project: Secure EC2 to S3 Integration
 
 A hands-on demonstration of building a secure, custom AWS environment using **VPC networking**, **IAM Instance Profiles**, and **S3 storage**.
 
@@ -22,22 +22,43 @@ A hands-on demonstration of building a secure, custom AWS environment using **VP
 *   Created a custom VPC (`gomyvpc`) with a `10.0.0.0/16` CIDR block.
 *   Provisioned `PublicSubnet1` and attached an **Internet Gateway**.
 *   Configured **Route Tables** to allow outbound internet traffic.
-*   **Proof:** ![VPC Map](images/vpc-map.png)
+
+**Proof:**
+![VPC Resource Map](images/vpcressourcesmap.png)
+![VPC Settings](images/vpc.png)
 
 ### 2. Security & Identity (IAM)
 *   Configured `GoMyEC2SecurityGroup` to allow **SSH (Port 22)** only from my specific IP.
 *   Created `EC2-S3-Access-Role` with S3 permissions.
 *   Attached the IAM Role as an **Instance Profile** to the EC2 to avoid using static access keys.
-*   **Proof:** ![EC2 Status](images/ec2-status.png)
+
+**Proof:**
+![IAM Role Configuration](images/iamrole.png)
 
 ### 3. S3 Interaction (CLI)
-Launched the instance and performed the following CLI operations to verify the IAM Role:
+Launched the instance and performed CLI operations to verify the IAM Role integration:
 
 ```bash
+# Verify IAM Identity
+aws sts get-caller-identity
 
 # Create and Upload Test File
-echo "Test data for S3" > mytestfile.txt
+echo "AWS Project Test Data" > mytestfile.txt
 aws s3 cp mytestfile.txt s3://gomys3bucket/
 
 # List Bucket Contents
 aws s3 ls s3://gomys3bucket/
+```
+
+**Proof:**
+![Terminal S3 Interaction](images/s3bucketinterractionterminal.png)
+![S3 Bucket Contents](images/S3bucket.png)
+
+---
+
+## 💡 Key Learnings
+*   **Security:** Implemented "Least Privilege" by using IAM Roles instead of hardcoded credentials.
+*   **Networking:** Mastered the flow of traffic between Internet Gateways, Route Tables, and Subnets.
+*   **Storage:** Demonstrated seamless S3 integration using the AWS CLI.
+
+---
