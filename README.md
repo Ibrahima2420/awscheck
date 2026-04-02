@@ -33,6 +33,7 @@ A hands-on demonstration of building a secure, custom AWS environment using **VP
 *   Attached the IAM Role as an **Instance Profile** to the EC2 to avoid using static access keys.
 
 **Proof:**
+![Securty Group Configuration](securitygroup.png)
 ![IAM Role Configuration](images/iamrole.png)
 
 ### 3. S3 Interaction (CLI)
@@ -43,7 +44,7 @@ Launched the instance and performed CLI operations to verify the IAM Role integr
 aws sts get-caller-identity
 
 # Create and Upload Test File
-echo "AWS Project Test Data" > mytestfile.txt
+echo "Test data for S3" > mytestfile.txt
 aws s3 cp mytestfile.txt s3://gomys3bucket/
 
 # List Bucket Contents
