@@ -36,7 +36,13 @@ A hands-on demonstration of building a secure, custom AWS environment using **VP
 ![Securty Group Configuration](securitygroup.png)
 ![IAM Role Configuration](images/iamrole.png)
 
-### 3. S3 Interaction (CLI)
+### 3. EC2 Instance Deployment
+*   Launched an **Amazon Linux** instance into the `PublicSubnet1` of `gomyvpc`.
+*   Assigned the `GoMyEC2SecurityGroup` to the instance for secure access.
+*   Attached the `EC2-S3-Access-Role` during the launch process.
+*   Successfully connected to the instance via **SSH** using a secure key pair.
+
+### 4. S3 Interaction (CLI)
 Launched the instance and performed CLI operations to verify the IAM Role integration:
 
 ```bash
