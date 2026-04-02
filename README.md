@@ -2,7 +2,7 @@ AWS Cloud Infrastructure: Secure EC2 to S3 Integration
 Project Overview
 This project demonstrates the deployment of a secure, custom AWS environment. It features a manual build of a Virtual Private Cloud (VPC) and a Linux-based EC2 instance configured to interact with S3 storage using IAM Roles for enhanced security.
 
-🏗 Infrastructure Components
+Infrastructure Components
 VPC: gomyvpc (10.0.0.0/16)
 
 Subnet: PublicSubnet1 (10.0.1.0/24)
@@ -13,7 +13,7 @@ IAM Role: EC2-S3-Access-Role (S3 Full Access)
 
 Storage: gomys3bucket (S3 Bucket)
 
-🛠 Implementation Details
+Implementation Details
 1. Network Setup
 I created the gomyvpc network to isolate resources. I attached an Internet Gateway and configured the Route Table for PublicSubnet1 to allow outbound internet access, transforming it into a functional public subnet.
 
