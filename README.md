@@ -46,11 +46,11 @@ A hands-on demonstration of building a secure, custom AWS environment using **VP
 ![Securty Group Configuration](images/Ec2instacne2.png)
 
 ### 4. S3 Interaction (CLI)
-Launched the instance and performed CLI operations to verify the IAM Role integration:
+Launched the instance and performed operations to verify the IAM Role integration:
 
 ```bash
-# Verify IAM Identity
-aws sts get-caller-identity
+# List the buckets
+aws s3 ls
 
 # Create and Upload Test File
 echo "Test data for S3" > mytestfile.txt
