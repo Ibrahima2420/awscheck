@@ -65,3 +65,11 @@ aws s3 ls s3://gomys3bucket/
 ![S3 Bucket Contents](images/gomys3bucket.png)
 
 ---
+### 5. CloudWatch Monitoring & Metrics
+Verified the real-time performance of the EC2 instance during the S3 data transfer using **Amazon CloudWatch**.
+
+*   **Activity Spike:** At `22:05 UTC`, a clear increase in traffic was recorded, confirming the file upload.
+*   **Network Out:** Peaked at **5.2 KB**, representing the data sent to the S3 bucket.
+*   **CPU Utilization:** Increased to **0.45%** during the operation, proving the instance successfully processed the request.
+**Proof:**
+![CloudWatch Metrics](images/cloudwatch.png)
