@@ -17,7 +17,7 @@ A hands-on demonstration of building a secure, custom AWS environment using **VP
 
 ---
 
-## 🛠 Implementation & Deliverables
+## Implementation & Deliverables
 
 ### 1. Networking & VPC Foundation
 *   Created a custom VPC (`gomyvpc`) with a `10.0.0.0/16` CIDR block.
