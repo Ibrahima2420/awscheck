@@ -61,7 +61,7 @@ aws s3 ls s3://gomys3bucket/
 ```
 
 **Proof:**
-![Terminal S3 Interaction](images/S3bucket2.png)
+![Terminal S3 Interaction](images/s3bucket2.png)
 ![S3 Bucket Contents](images/S3bucket.png)
 
 ---
