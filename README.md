@@ -4,7 +4,7 @@ A hands-on demonstration of building a secure, custom AWS environment using **VP
 
 ---
 
-## 🏗 Infrastructure Overview
+## Infrastructure Overview
 
 | Component | Resource Name |
 | :--- | :--- |
