@@ -43,7 +43,7 @@ A hands-on demonstration of building a secure, custom AWS environment using **VP
 *   Successfully connected to the instance via **SSH** using a secure key pair.
 
 **Proof:**
-![Securty Group Configuration](images/EC2instance.png)
+![Securty Group Configuration](images/Ec2instacne2.png)
 
 ### 4. S3 Interaction (CLI)
 Launched the instance and performed CLI operations to verify the IAM Role integration:
@@ -61,7 +61,7 @@ aws s3 ls s3://gomys3bucket/
 ```
 
 **Proof:**
-![Terminal S3 Interaction](images/s3bucketinterractionterminal.png)
+![Terminal S3 Interaction](images/S3bucket2.png)
 ![S3 Bucket Contents](images/S3bucket.png)
 
 ---
