@@ -13,6 +13,7 @@ A hands-on demonstration of building a secure, custom AWS environment using **VP
 | **Security Group** | `GoMyEC2SecurityGroup` |
 | **IAM Role** | `EC2-S3-Access-Role` |
 | **S3 Bucket** | `gomys3bucket` |
+| **EC2 instance** | `Gomyinstance` |
 
 ---
 
@@ -73,3 +74,4 @@ Verified the real-time performance of the EC2 instance during the S3 data transf
 *   **CPU Utilization:** Increased to **0.45%** during the operation, proving the instance successfully processed the request.
 **Proof:**
 ![CloudWatch Metrics](images/cloudwatch.png)
+![CloudWatch Metrics](images/cloudwatch2.png)
